@@ -1,3 +1,11 @@
+# 修改说明
+
+原版的 HPM SDK 一定会添加一个名为 app 的 target，且会全局地对 compile option 等进行修改。这对于一个 SDK 来说是过于侵入性的。
+
+本修改版本用一个精简的 CMakeLists.txt 进行替换。它添加了一个名为 hpm_sdk_if 的 interface 库 target，无任何侵入性修改。用户只需要在自己的 CMakeLists.txt 中 link 该 target 即可使用 HPM SDK。
+
+这只是给自己用的，所以不保证所有的功能均可用。
+
 ``` mermaid
 gantt
     title HPM SDK Release Plan

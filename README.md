@@ -1,3 +1,11 @@
+# Modification description
+
+The original HPM SDK always adds a target named "app" and globally modifies compile options, which is too intrusive for an SDK.
+
+This modified version replaces it with a simplified CMakeLists.txt. It only adds an interface library target named "hpm_sdk_if" without any intrusive modifications. Users only need to link this target in their own CMakeLists.txt to use the HPM SDK.
+
+This is just for personal use, so not all features are guaranteed to be available.
+
 ``` mermaid
 gantt
     title HPM SDK Release Plan
